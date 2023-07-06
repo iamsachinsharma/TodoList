@@ -15,27 +15,27 @@ struct AddView: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("Add an item...", text: $textFieldText)
-                    .padding(.horizontal)
-                    .frame(height: 55)
-                    .background(Color(.gray).opacity(0.3))
-                    .cornerRadius(10)
-                Button {
-                    //
-                } label: {
-                    Text("SAVE")
-                        .font(.headline)
+                VStack {
+                    TextField("Add an item...", text: $textFieldText)
+                        .padding(.horizontal)
                         .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
+                        .background(Color(.gray).opacity(0.3))
                         .cornerRadius(10)
-                    
+                    Button {
+                        //
+                    } label: {
+                        Text("SAVE")
+                            .font(.headline)
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(10)
+                        
+                    }
                 }
-            }
-            .padding(14)
+            }.padding(14)
         }
-        .navigationTitle("Add an item ✍️")
     }
 }
 
